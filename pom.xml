@@ -34,8 +34,8 @@
             <version>${flow.version}</version>
             <scope>test</scope>
         </dependency>
-<!--         TODO: remove the one before and add single component, once the necessary ones are available as single component. -->
-<!-- TextField, DatePicker, Button, Checkbox  -->
+<!--         TODO: remove the one before and add single component, once the necessary ones are available as single components. -->
+<!--         Then components' dependencies should be added for TextField, DatePicker, Button, Checkbox  -->
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>flow-components</artifactId>
