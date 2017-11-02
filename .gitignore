@@ -5,3 +5,7 @@ target/
 .project
 .settings
 .classpath
+
+# Selenium
+reference-screenshots
+error-screenshots
