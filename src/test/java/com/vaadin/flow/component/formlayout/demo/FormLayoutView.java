@@ -29,6 +29,7 @@ import com.vaadin.flow.component.formlayout.FormLayout.ResponsiveStep;
 import com.vaadin.flow.component.formlayout.demo.FormLayoutView.MyCustomLayout;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.html.NativeNativeButton;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.Binder.Binding;
 import com.vaadin.flow.data.binder.BinderValidationStatus;
@@ -38,7 +39,6 @@ import com.vaadin.flow.data.validator.StringLengthValidator;
 import com.vaadin.flow.demo.DemoView;
 import com.vaadin.flow.function.SerializablePredicate;
 import com.vaadin.flow.router.Route;
-import com.vaadin.ui.button.Button;
 import com.vaadin.ui.checkbox.Checkbox;
 import com.vaadin.ui.datepicker.DatePicker;
 import com.vaadin.ui.layout.HorizontalLayout;
@@ -225,8 +225,8 @@ public class FormLayoutView extends DemoView {
         DatePicker birthDate = new DatePicker();
         Checkbox doNotCall = new Checkbox("Do not call");
         Label infoLabel = new Label();
-        Button save = new Button("Save");
-        Button reset = new Button("Reset");
+        NativeNativeButton save = new NativeNativeButton("Save");
+        NativeNativeButton reset = new NativeNativeButton("Reset");
 
         layoutWithBinder.addFormItem(firstName, "First name");
         layoutWithBinder.addFormItem(lastName, "Last name");
