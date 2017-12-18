@@ -211,7 +211,7 @@ public class GeneratedVaadinFormItem<R extends GeneratedVaadinFormItem<R>>
      *            the components to add
      * @see HasComponents#add(Component...)
      */
-    public GeneratedVaadinFormItem(com.vaadin.ui.Component... components) {
+    public GeneratedVaadinFormItem(Component... components) {
         add(components);
     }
 
