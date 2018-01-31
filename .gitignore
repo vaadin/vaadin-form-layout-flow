@@ -6,6 +6,11 @@ target/
 .settings
 .classpath
 
-# Selenium
-reference-screenshots
+# Selenium driver folders
 error-screenshots
+reference-screenshots
+
+# IntelliJ IDEA files
+.idea/
+*.iml
+
