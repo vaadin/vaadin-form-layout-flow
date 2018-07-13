@@ -31,19 +31,49 @@
         <dependency>
             <groupId>org.webjars.bowergithub.vaadin</groupId>
             <artifactId>vaadin-form-layout</artifactId>
-            <version>2.0.1</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.webjars.bowergithub.polymerelements</groupId>
-                    <artifactId>iron-flex-layout</artifactId>
-                </exclusion>
-            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.webjars.bowergithub.vaadin</groupId>
+            <artifactId>vaadin-themable-mixin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.bowergithub.polymerelements</groupId>
+            <artifactId>iron-resizable-behavior</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.bowergithub.vaadin</groupId>
+            <artifactId>vaadin-element-mixin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.bowergithub.vaadin</groupId>
+            <artifactId>vaadin-usage-statistics</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.bowergithub.vaadin</groupId>
+            <artifactId>vaadin-development-mode-detector</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.bowergithub.vaadin</groupId>
+            <artifactId>vaadin-lumo-styles</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.bowergithub.polymerelements</groupId>
+            <artifactId>iron-icon</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.bowergithub.polymerelements</groupId>
+            <artifactId>iron-meta</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.bowergithub.polymerelements</groupId>
+            <artifactId>iron-iconset-svg</artifactId>
         </dependency>
         <dependency>
             <groupId>org.webjars.bowergithub.polymerelements</groupId>
             <artifactId>iron-flex-layout</artifactId>
-            <version>2.0.3</version>
         </dependency>
+
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>flow</artifactId>
@@ -76,48 +106,24 @@
             <artifactId>vaadin-checkbox-flow</artifactId>
             <version>1.1-SNAPSHOT</version>
             <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.webjars.bowergithub.polymerelements</groupId>
-                    <artifactId>iron-flex-layout</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-date-picker-flow</artifactId>
             <version>1.1-SNAPSHOT</version>
             <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.webjars.bowergithub.polymerelements</groupId>
-                    <artifactId>iron-flex-layout</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-text-field-flow</artifactId>
             <version>1.1-SNAPSHOT</version>
             <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.webjars.bowergithub.polymerelements</groupId>
-                    <artifactId>iron-flex-layout</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-ordered-layout-flow</artifactId>
             <version>1.1-SNAPSHOT</version>
             <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.webjars.bowergithub.polymerelements</groupId>
-                    <artifactId>iron-flex-layout</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
