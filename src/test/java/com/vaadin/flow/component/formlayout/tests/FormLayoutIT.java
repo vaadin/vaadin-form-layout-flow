@@ -22,6 +22,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import com.vaadin.flow.component.formlayout.demo.FormLayoutView;
@@ -129,6 +130,33 @@ public class FormLayoutIT extends ComponentDemoTest {
         Assert.assertEquals("", getValue("binder-email"));
         Assert.assertEquals("", getValue("binder-birth-date"));
         Assert.assertEquals(false, isChecked("binder-do-not-call"));
+    }
+
+    @Test
+    public void errorMessageExistsAfterBlurEvent() {
+        WebElement info = findElement(By.id("binder-info"));
+        WebElement save = findElement(By.id("binder-save"));
+        forceClick(save);
+
+        waitUntil(
+                driver -> "There are errors: Both phone and email cannot be empty, Please add the first name, Please add the last name"
+                        .equals(info.getText()));
+
+        WebElement firstName = findElement(By.id("binder-first-name"));
+        WebElement lastName = findElement(By.id("binder-last-name"));
+        Assert.assertEquals(true,
+                executeScript("return arguments[0].invalid;", firstName));
+        // refocus the component, blur and move the focus to next textfield
+        executeScript("arguments[0].focus();", firstName);
+        blur();
+        firstName.sendKeys(Keys.TAB);
+
+        Assert.assertEquals(true,
+                executeScript("return arguments[0].invalid;", firstName));
+
+        firstName.sendKeys("sdf");
+        Assert.assertEquals(false,
+                executeScript("return arguments[0].invalid;", firstName));
     }
 
     private void setChecked(String id, boolean checked) {
