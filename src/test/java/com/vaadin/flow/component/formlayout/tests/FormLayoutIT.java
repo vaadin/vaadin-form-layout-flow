@@ -55,7 +55,7 @@ public class FormLayoutIT extends ComponentDemoTest {
         Assert.assertTrue(Math.abs(textFields.get(1).getLocation().getY()
                 - textFields.get(0).getLocation().getY()) < 2);
 
-        getDriver().manage().window().setSize(new Dimension(370, 620));
+        getDriver().manage().window().setSize(new Dimension(360, 620));
 
         // window resized, should be in 2 column mode, last textfield below
         // other two
