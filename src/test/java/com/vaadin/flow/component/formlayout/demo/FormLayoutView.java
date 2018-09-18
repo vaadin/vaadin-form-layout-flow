@@ -163,12 +163,15 @@ public class FormLayoutView extends DemoView {
         FormLayout nameLayout = new FormLayout();
 
         TextField titleField = new TextField();
+        titleField.getElement().getStyle().set("min-width", "200px");
         titleField.setLabel("Title");
         titleField.setPlaceholder("Sir");
         TextField firstNameField = new TextField();
+        firstNameField.getElement().getStyle().set("min-width", "200px");
         firstNameField.setLabel("First name");
         firstNameField.setPlaceholder("John");
         TextField lastNameField = new TextField();
+        lastNameField.getElement().getStyle().set("min-width", "200px");
         lastNameField.setLabel("Last name");
         lastNameField.setPlaceholder("Doe");
 
