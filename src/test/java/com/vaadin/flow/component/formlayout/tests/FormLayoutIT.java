@@ -66,7 +66,7 @@ public class FormLayoutIT extends ComponentDemoTest {
         Assert.assertTrue(textFields.get(2).getLocation().getY() > textFields
                 .get(0).getLocation().getY());
 
-        getDriver().manage().window().setSize(new Dimension(365, 620));
+        getDriver().manage().window().setSize(new Dimension(200, 620));
 
         // resized to 1 column mode, fields should be arranged below one another
         Assert.assertTrue(
