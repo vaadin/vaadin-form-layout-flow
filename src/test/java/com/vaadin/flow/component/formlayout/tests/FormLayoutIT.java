@@ -22,7 +22,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 
 import com.vaadin.flow.component.formlayout.demo.FormLayoutView;
 import com.vaadin.flow.demo.ComponentDemoTest;
@@ -59,10 +61,18 @@ public class FormLayoutIT extends ComponentDemoTest {
 
         // window resized, should be in 2 column mode, last textfield below
         // other two
-        Assert.assertTrue(
-                "Layout should be in 2 column mode, last field should be below the first two",
-                textFields.get(2).getLocation().getY() > textFields.get(1)
-                        .getLocation().getY());
+        waitUntil(new ExpectedCondition<Boolean>() {
+            @Override
+            public Boolean apply(WebDriver driver) {
+                return textFields.get(2).getLocation().getY() > textFields
+                        .get(1).getLocation().getY();
+            }
+
+            @Override
+            public String toString() {
+                return "Layout should be in 2 column mode, last field should be below the first two";
+            }
+        });
         Assert.assertTrue(textFields.get(2).getLocation().getY() > textFields
                 .get(0).getLocation().getY());
 
