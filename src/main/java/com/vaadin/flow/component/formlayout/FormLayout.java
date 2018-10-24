@@ -244,7 +244,7 @@ public class FormLayout extends GeneratedVaadinFormLayout<FormLayout>
         AtomicInteger index = new AtomicInteger();
         getElement().setPropertyJson("responsiveSteps",
                 steps.stream().map(ResponsiveStep::toJson).collect(
-                        () -> Json.createArray(),
+                        Json::createArray,
                         (arr, value) -> arr.set(index.getAndIncrement(), value),
                         (arr, arrOther) -> {
                             int startIndex = arr.length();
