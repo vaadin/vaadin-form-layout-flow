@@ -235,8 +235,7 @@ public class FormLayout extends GeneratedVaadinFormLayout<FormLayout>
     }
     
     /**
-     * add a component with the desired colspan with
-     * {@link #add(Component)}.
+     * Adds a component with the desired colspan.
      *
      * @param component
      *            the component to add
@@ -249,6 +248,24 @@ public class FormLayout extends GeneratedVaadinFormLayout<FormLayout>
     	add(component);
     	setColspan(component, colspan);
     	
+    }
+    
+    /**
+     * Gets the colspan of a component, if any. if none is set, returns 1
+     *
+     * @param component
+     *            the component whose colspan is retrieved
+     *
+     *
+     */
+    
+    public int getColspan(Component component) {
+    	String str_colspan = component.getElement().getAttribute("colspan");
+    	if (str_colspan == null) {
+    		return 1;
+    	} else {
+    		return Integer.parseInt(str_colspan);
+    	}
     }
 
     /**
