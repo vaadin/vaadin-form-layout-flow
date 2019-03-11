@@ -211,6 +211,45 @@ public class FormLayout extends GeneratedVaadinFormLayout<FormLayout>
     public FormLayout(Component... components) {
         add(components);
     }
+    
+    /**
+     * Sets the colspan of the given component's element.
+     * You can directly add components with the wanted colspan with
+     * {@link #add(Component)}.
+     *
+     * @param component
+     *            the component to modify
+     *
+     * @param colspan
+     *            the desired colspan for the component
+     *
+     */
+    public void setColspan(Component component, int colspan) {
+    	String str_colspan = "";
+    	if (colspan < 1) {
+    		str_colspan = "1";
+    	} else {
+    		str_colspan=String.valueOf(colspan);
+    	}
+    	component.getElement().setAttribute("colspan", str_colspan );
+    }
+    
+    /**
+     * add a component with the desired colspan with
+     * {@link #add(Component)}.
+     *
+     * @param component
+     *            the component to add
+     *
+     * @param colspan
+     *            the desired colspan for the component
+     *
+     */
+    public void add(Component component, int colspan) {
+    	add(component);
+    	setColspan(component, colspan);
+    	
+    }
 
     /**
      * Get the list of {@link ResponsiveStep}s used to configure this layout.
