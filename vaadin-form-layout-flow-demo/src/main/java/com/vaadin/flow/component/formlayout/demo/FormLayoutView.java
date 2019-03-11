@@ -335,23 +335,30 @@ public class FormLayoutView extends DemoView {
         // begin-source-example
         // source-example-heading: Handling columns and colspans in a layout
     	FormLayout colLayout = new FormLayout();
-    	//After setting the desired responsive steps for your columns in the layout
+    	//Setting the desired responsive steps for the columns in the layout
     	colLayout.setResponsiveSteps(
                 new ResponsiveStep("0", 1),
                 new ResponsiveStep("21em", 2),
                 new ResponsiveStep("22em", 3));
         TextField firstname = new TextField();
+        firstname.setPlaceholder("First Name");
         TextField lastname = new TextField();
+        lastname.setPlaceholder("Last Name");
         TextField email = new TextField();
+        email.setPlaceholder("Email");
         TextField nickname = new TextField();
+        nickname.setPlaceholder("Username");
         TextField website = new TextField();
+        website.setPlaceholder("Link to personal website");
         TextField description = new TextField();
-        //and adding the components to it...
-        colLayout.add(firstname, lastname, email, nickname, website);
+        description.setPlaceholder("Enter a short description about yourself");
+        //Adding the components to it.
+        colLayout.add(firstname, lastname,  nickname, email, website); 
         //you can set the desired column span for them individually.
         colLayout.setColspan(website, 2);
-        //or you can just set it while adding them :
+        //or just set it while adding them :
         colLayout.add(description, 3);
+        //by default the colspan is one.
         // end-source-example
         addCard("Handling columns and colspans in a layout", colLayout);
     }
