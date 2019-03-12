@@ -340,10 +340,10 @@ public class FormLayoutView extends DemoView {
                 new ResponsiveStep("0", 1),
                 new ResponsiveStep("21em", 2),
                 new ResponsiveStep("22em", 3));
-        TextField firstname = new TextField();
-        firstname.setPlaceholder("First Name");
-        TextField lastname = new TextField();
-        lastname.setPlaceholder("Last Name");
+        TextField firstName = new TextField();
+        firstName.setPlaceholder("First Name");
+        TextField lastName = new TextField();
+        lastName.setPlaceholder("Last Name");
         TextField email = new TextField();
         email.setPlaceholder("Email");
         TextField nickname = new TextField();
@@ -353,12 +353,22 @@ public class FormLayoutView extends DemoView {
         TextField description = new TextField();
         description.setPlaceholder("Enter a short description about yourself");
         //Adding the components to it.
-        colLayout.add(firstname, lastname,  nickname, email, website); 
+        colLayout.add(firstName, lastName,  nickname, email, website); 
         //you can set the desired column span for them individually.
         colLayout.setColspan(website, 2);
         //or just set it while adding them :
         colLayout.add(description, 3);
         // end-source-example
+        
+        firstName.setId("colspan-first-name");
+        lastName.setId("colspan-last-name");
+        nickname.setId("colspan-nickname");
+        email.setId("colspan-email");
+        website.setId("colspan-website");
+        description.setId("colspan-description");
+
+        
+        
         addCard("Handling columns and colspans in a layout", colLayout);
     }
 }
