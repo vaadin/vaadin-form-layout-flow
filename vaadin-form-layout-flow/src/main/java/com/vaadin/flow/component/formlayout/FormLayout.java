@@ -225,13 +225,13 @@ public class FormLayout extends GeneratedVaadinFormLayout<FormLayout>
      *
      */
     public void setColspan(Component component, int colspan) {
-    	String str_colspan = "";
+    	String strColspan = "";
     	if (colspan < 1) {
-    		str_colspan = "1";
+    		strColspan = "1";
     	} else {
-    		str_colspan=String.valueOf(colspan);
+    		strColspan=String.valueOf(colspan);
     	}
-    	component.getElement().setAttribute("colspan", str_colspan );
+    	component.getElement().setAttribute("colspan", strColspan );
     }
     
     /**
@@ -260,12 +260,12 @@ public class FormLayout extends GeneratedVaadinFormLayout<FormLayout>
      */
     
     public int getColspan(Component component) {
-    	String str_colspan = component.getElement().getAttribute("colspan");
-    	if (str_colspan == null) {
+    	String strColspan = component.getElement().getAttribute("colspan");
+    	if (strColspan == null) {
     		return 1;
 		//need this in case the colspan is modified outside the API to an incorrect format somehow.
-    	} else if (str_colspan.matches("\\d+")) {
-    		return Integer.parseInt(str_colspan);
+    	} else if (strColspan.matches("\\d+")) {
+    		return Integer.parseInt(strColspan);
     	} else {
     		return 1;
     	}
