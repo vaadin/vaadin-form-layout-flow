@@ -263,8 +263,11 @@ public class FormLayout extends GeneratedVaadinFormLayout<FormLayout>
     	String str_colspan = component.getElement().getAttribute("colspan");
     	if (str_colspan == null) {
     		return 1;
-    	} else {
+		//need this in case the colspan is modified outside the API to an incorrect format somehow.
+    	} else if (str_colspan.matches("\\d+")) {
     		return Integer.parseInt(str_colspan);
+    	} else {
+    		return 1;
     	}
     }
 
