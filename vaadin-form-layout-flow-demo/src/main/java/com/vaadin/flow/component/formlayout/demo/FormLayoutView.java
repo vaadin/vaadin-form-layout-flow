@@ -358,7 +358,6 @@ public class FormLayoutView extends DemoView {
         colLayout.setColspan(website, 2);
         //or just set it while adding them :
         colLayout.add(description, 3);
-        //by default the colspan is one.
         // end-source-example
         addCard("Handling columns and colspans in a layout", colLayout);
     }
