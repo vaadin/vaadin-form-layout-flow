@@ -214,8 +214,9 @@ public class FormLayout extends GeneratedVaadinFormLayout<FormLayout>
     
     /**
      * Sets the colspan of the given component's element.
+     * Will default to 1 if an integer lower than 1 is supplied.
      * You can directly add components with the wanted colspan with
-     * {@link #add(Component)}.
+     * {@link #add(Component, int)}.
      *
      * @param component
      *            the component to set the colspan for, not {@code null}
@@ -225,6 +226,7 @@ public class FormLayout extends GeneratedVaadinFormLayout<FormLayout>
      *
      */
     public void setColspan(Component component, int colspan) {
+        Objects.requireNonNull(component, "component cannot be null");
     	String strColspan = "";
     	if (colspan < 1) {
     		strColspan = "1";
@@ -236,6 +238,8 @@ public class FormLayout extends GeneratedVaadinFormLayout<FormLayout>
     
     /**
      * Adds a component with the desired colspan.
+     * This method is a shorthand for calling {@link #add(Component)} 
+     * and {@link #setColspan(Component, int)}
      *
      * @param component
      *            the component to add
