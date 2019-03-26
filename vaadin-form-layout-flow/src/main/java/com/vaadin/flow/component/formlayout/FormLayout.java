@@ -218,7 +218,7 @@ public class FormLayout extends GeneratedVaadinFormLayout<FormLayout>
      * {@link #add(Component)}.
      *
      * @param component
-     *            the component to modify
+     *            the component to set the colspan for, not {@code null}
      *
      * @param colspan
      *            the desired colspan for the component
