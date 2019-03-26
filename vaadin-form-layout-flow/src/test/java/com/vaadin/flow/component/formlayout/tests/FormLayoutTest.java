@@ -27,8 +27,10 @@ public class FormLayoutTest {
         FormLayout layout = new FormLayout();
         Assert.assertTrue(layout.getResponsiveSteps().isEmpty());
     }
+    
 
-    @Test void verifyColspanElement(){
+    @Test 
+    public void verifyColspanElement(){
         FormLayout layout = new FormLayout();
         // using layouts as components to avoid importing dependencies.
         
