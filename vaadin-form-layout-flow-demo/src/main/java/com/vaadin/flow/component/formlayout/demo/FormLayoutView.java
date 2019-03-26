@@ -335,7 +335,7 @@ public class FormLayoutView extends DemoView {
         // begin-source-example
         // source-example-heading: Handling columns and colspans in a layout
     	FormLayout colLayout = new FormLayout();
-    	//Setting the desired responsive steps for the columns in the layout
+    	// Setting the desired responsive steps for the columns in the layout
     	colLayout.setResponsiveSteps(
                 new ResponsiveStep("0", 1),
                 new ResponsiveStep("21em", 2),
