@@ -251,7 +251,7 @@ public class FormLayout extends GeneratedVaadinFormLayout<FormLayout>
     }
     
     /**
-     * Gets the colspan of a component, if any. if none is set, returns 1
+     * Gets the colspan of the given component. If none is set, returns 1.
      *
      * @param component
      *            the component whose colspan is retrieved
