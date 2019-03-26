@@ -28,6 +28,14 @@ public class FormLayoutTest {
         Assert.assertTrue(layout.getResponsiveSteps().isEmpty());
     }
     
+    @Test
+    public void create_FormLayout() {
+        // Just testing that creating form layout actually compiles and doesn't
+        // throw. Test is on purpose, so that the implementation not
+        // accidentally removed.
+        FormLayout formLayout = new FormLayout();
+        formLayout.addClickListener(event -> {});
+    }
 
     @Test 
     public void verifyColspanElement(){
