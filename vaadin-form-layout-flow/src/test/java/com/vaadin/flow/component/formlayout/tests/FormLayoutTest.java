@@ -27,7 +27,7 @@ public class FormLayoutTest {
         FormLayout layout = new FormLayout();
         Assert.assertTrue(layout.getResponsiveSteps().isEmpty());
     }
-    
+
     @Test
     public void create_FormLayout() {
         // Just testing that creating form layout actually compiles and doesn't
@@ -36,6 +36,7 @@ public class FormLayoutTest {
         FormLayout formLayout = new FormLayout();
         formLayout.addClickListener(event -> {});
     }
+
 
     @Test 
     public void verifyColspanElement(){

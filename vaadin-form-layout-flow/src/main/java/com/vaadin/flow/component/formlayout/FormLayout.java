@@ -27,6 +27,8 @@ import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.HasComponents;
 import com.vaadin.flow.component.HasSize;
 import com.vaadin.flow.component.JsonSerializable;
+import org.jsoup.helper.StringUtil;
+
 import com.vaadin.flow.component.html.Label;
 import org.jsoup.helper.StringUtil;
 
