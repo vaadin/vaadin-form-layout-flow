@@ -37,10 +37,6 @@ public class FormLayoutTest {
         layout.add(comp1, 2);
         String strColspan = comp1.getElement().getAttribute("colspan");
         Assert.assertEquals(Integer.parseInt(strColspan),2);
-
-
-        
-        
     }
     
     @Test
