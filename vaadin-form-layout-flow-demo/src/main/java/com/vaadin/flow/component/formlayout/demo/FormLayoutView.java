@@ -352,7 +352,6 @@ public class FormLayoutView extends DemoView {
         website.setPlaceholder("Link to personal website");
         TextField description = new TextField();
         description.setPlaceholder("Enter a short description about yourself");
-        //Adding the components to it.
         colLayout.add(firstName, lastName,  nickname, email, website); 
         // you can set the desired column span for them individually.
         colLayout.setColspan(website, 2);
