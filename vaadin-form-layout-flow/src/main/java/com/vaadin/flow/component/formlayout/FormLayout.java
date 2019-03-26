@@ -258,7 +258,6 @@ public class FormLayout extends GeneratedVaadinFormLayout<FormLayout>
      *
      *
      */
-    
     public int getColspan(Component component) {
     	String strColspan = component.getElement().getAttribute("colspan");
     	if (strColspan == null) {
