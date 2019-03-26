@@ -355,7 +355,7 @@ public class FormLayoutView extends DemoView {
         colLayout.add(firstName, lastName,  nickname, email, website); 
         // you can set the desired column span for them individually.
         colLayout.setColspan(website, 2);
-        //or just set it while adding them :
+        // you can set the desired column span for them individually.
         colLayout.add(description, 3);
         // end-source-example
         
