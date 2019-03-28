@@ -31,7 +31,6 @@ import com.vaadin.flow.component.JsonSerializable;
 import org.jsoup.helper.StringUtil;
 
 import com.vaadin.flow.component.html.Label;
-import org.jsoup.helper.StringUtil;
 
 import elemental.json.Json;
 import elemental.json.JsonArray;
