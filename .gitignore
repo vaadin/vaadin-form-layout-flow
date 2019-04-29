@@ -17,3 +17,8 @@ reference-screenshots
 # Build files
 */bin/*
 */target/*
+
+# The following files are generated/updated by flow-maven-plugin
+package.json
+webpack.config.js
+node_modules/
