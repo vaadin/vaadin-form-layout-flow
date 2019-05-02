@@ -9,7 +9,7 @@
         <version>2.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>vaadin-form-layout-flow-testbench</artifactId>
+    <artifactId>vaadin-form-layout-testbench</artifactId>
     <name>Vaadin Form Layout Flow Testbench</name>
 
     <dependencies>
