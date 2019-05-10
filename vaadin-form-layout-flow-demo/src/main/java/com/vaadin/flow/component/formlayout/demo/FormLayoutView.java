@@ -176,9 +176,9 @@ public class FormLayoutView extends DemoView {
         nameLayout.add(titleField, firstNameField, lastNameField);
 
         nameLayout.setResponsiveSteps(
-                new ResponsiveStep("0", 1),
-                new ResponsiveStep("21em", 2),
-                new ResponsiveStep("22em", 3));
+                new ResponsiveStep("25em", 1),
+                new ResponsiveStep("27em", 2),
+                new ResponsiveStep("29em", 3));
         // end-source-example
         // @formatter:on
 

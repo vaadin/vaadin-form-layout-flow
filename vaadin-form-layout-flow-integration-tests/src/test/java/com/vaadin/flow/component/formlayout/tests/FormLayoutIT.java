@@ -39,13 +39,6 @@ public class FormLayoutIT extends ComponentDemoTest {
     }
 
     @Test
-    @Ignore
-    /*
-     * The test works locally but fails on TC. Disabling it for now.
-     *
-     * The issue is that the fields do not behave the same (responsive) way when
-     * you resize the browser window
-     */
     public void custom_responsive_layouting() {
         WebElement firstLayout = layout
                 .findElement(By.tagName("vaadin-form-layout"));
@@ -63,7 +56,7 @@ public class FormLayoutIT extends ComponentDemoTest {
         Assert.assertTrue(Math.abs(textFields.get(1).getLocation().getY()
                 - textFields.get(0).getLocation().getY()) < 2);
 
-        getDriver().manage().window().setSize(new Dimension(380, 620));
+        getDriver().manage().window().setSize(new Dimension(450, 620));
 
         // window resized, should be in 2 column mode, last textfield below
         // other two
@@ -74,7 +67,7 @@ public class FormLayoutIT extends ComponentDemoTest {
         Assert.assertTrue(textFields.get(2).getLocation().getY() > textFields
                 .get(0).getLocation().getY());
 
-        getDriver().manage().window().setSize(new Dimension(300, 620));
+        getDriver().manage().window().setSize(new Dimension(400, 620));
 
         // resized to 1 column mode, fields should be arranged below one another
         Assert.assertTrue(
