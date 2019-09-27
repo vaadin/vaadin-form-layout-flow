@@ -124,7 +124,7 @@ public class FormLayout extends GeneratedVaadinFormLayout<FormLayout>
         @Override
         public JsonObject toJson() {
             JsonObject json = Json.createObject();
-            if (minWidth != null && !!minWidth.chars().allMatch(Character::isWhitespace)) {
+            if (minWidth != null && !minWidth.chars().allMatch(Character::isWhitespace)) {
                 json.put(MIN_WIDTH_JSON_KEY, minWidth);
             }
             json.put(COLUMNS_JSON_KEY, columns);
