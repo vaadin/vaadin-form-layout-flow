@@ -177,6 +177,7 @@ public class FormLayoutView extends DemoView {
                 new ResponsiveStep("25em", 1),
                 new ResponsiveStep("32em", 2),
                 new ResponsiveStep("40em", 3));
+        add(nameLayout);
         // end-source-example
         // @formatter:on
 
@@ -201,10 +202,14 @@ public class FormLayoutView extends DemoView {
 
         layoutWithFormItems.addFormItem(firstName, "First name");
         layoutWithFormItems.addFormItem(lastName, "Last name");
+
         layoutWithFormItems.addFormItem(birthDate, "Birthdate");
         layoutWithFormItems.addFormItem(email, "E-mail");
         FormItem phoneItem = layoutWithFormItems.addFormItem(phone, "Phone");
         phoneItem.add(doNotCall);
+
+        add(layoutWithFormItems);
+
         // end-source-example
 
         addCard("A form layout with fields wrapped in items",
@@ -237,6 +242,7 @@ public class FormLayoutView extends DemoView {
         columnLayout.setColspan(website, 2);
         // Or just set it as you add them.
         columnLayout.add(description, 3);
+        add(columnLayout);
         // end-source-example
         
         firstName.setId("colspan-first-name");
@@ -326,6 +332,7 @@ public class FormLayoutView extends DemoView {
             binder.readBean(null);
             infoLabel.setText("");
         });
+        add(layoutWithBinder, actions, infoLabel);
         // end-source-example
 
         infoLabel.setId("binder-info");
@@ -353,6 +360,7 @@ public class FormLayoutView extends DemoView {
         // Both the email field and the emailUpdates checkbox are wrapped inside
         // the same form item
         layout.addItemWithLabel("E-mail", email, emailUpdates);
+        add(layout);
         // end-source-example
 
         addCard("Using form layout inside a composite", layout);
