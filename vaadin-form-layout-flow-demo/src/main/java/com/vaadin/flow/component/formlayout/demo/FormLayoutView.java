@@ -123,7 +123,11 @@ public class FormLayoutView extends DemoView {
         @Override
         public String toString() {
             StringBuilder builder = new StringBuilder();
-            builder.append(firstName).append(" ").append(lastName);
+            if ((firstName != null && !firstName.isEmpty()) || (lastName != null
+                  && !lastName.isEmpty())) {
+                builder.append(firstName).append(" ").append(lastName)
+                      .append(", ");
+            }
             if (birthDate != null) {
                 builder.append("born on ").append(birthDate).append(", ");
             }
