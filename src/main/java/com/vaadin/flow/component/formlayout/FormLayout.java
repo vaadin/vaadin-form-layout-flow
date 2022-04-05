@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.jsoup.helper.StringUtil;
+import org.jsoup.internal.StringUtil;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.HasComponents;
